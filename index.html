@@ -3,6 +3,7 @@
  <head>
   <meta charset="utf-8">
   <title>Пример страницы</title>
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <style>
@@ -22,7 +23,32 @@
   .paint {
 	background-color: #680bab;
   }
+  .main{
+	
+  }
+  .overall{
+  
+  }
+  .random{
+  
+  }
+  .login{
+  
+  }
   </style>
+  <script>
+	$(document).ready(function(){
+	$(".main").mouseover(function(){ $(this).css("background-color","#999999"); });
+	$(".login").mouseover(function(){ $(this).css("background-color","#999999"); });
+	$(".random").mouseover(function(){ $(this).css("background-color","#999999"); });
+	$(".overall").mouseover(function(){ $(this).css("background-color","#999999"); });
+	$(".header").mouseout(function(){ $(".header").css("background-color","#36bbce"); });
+	$("#1,#2,#3,#4").button();
+	
+	
+});
+ 
+  </script>
  </head>
  <body>
 	<div style="background-color: #f0f0f0; height: 1000px; width: 100%">
@@ -33,10 +59,10 @@
 </div>
 
 <div class="row">
-  <div class="col-md-3 header">Главная</div>
-  <div class="col-md-3 header">Общее</div>
-  <div class="col-md-3 header">Случайное</div>
-  <div class="col-md-3 header">Личный кабинет</div>
+  <div class="col-md-3 header main"><a id=1 href="index.html">Главная</a></div>
+  <div class="col-md-3 header overall"><a id=2 href="public.html">Общее</a></div>
+  <div class="col-md-3 header random"><a id=3 href="random.html">Случайное</a></div>
+  <div class="col-md-3 header login"><a id=4 href="login.html">Личный кабинет</a></div>
 </div>
 	<div class="row">
   <div class="col-md-3 col-xs-3 basis paint">
